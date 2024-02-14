@@ -18,5 +18,6 @@ router
       }
     })
     router.resource('/post', PostsController).apiOnly()
+    router.delete('/post/delimage/:id', [PostsController, 'deleteImage'])
   })
   .prefix('/api')
