@@ -17,6 +17,6 @@ router
         hello: 'world',
       }
     })
-    router.post('/post', [PostsController, 'store'])
+    router.resource('/post', PostsController).apiOnly()
   })
   .prefix('/api')
