@@ -8,7 +8,7 @@ export default class extends BaseSchema {
       table.increments('id')
       table.string('user')
       table.string('comment')
-      table.integer('post_id').unsigned().references('blogs.id').onDelete('CASCADE')
+      table.integer('blog_id').unsigned().references('blogs.id').onDelete('CASCADE')
       table.timestamp('created_at')
       table.timestamp('updated_at')
     })

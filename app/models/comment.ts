@@ -12,7 +12,7 @@ export default class Comment extends BaseModel {
   declare comment: string
 
   @column()
-  declare postId: number
+  declare blogId: number
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

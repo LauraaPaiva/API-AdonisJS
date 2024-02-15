@@ -15,7 +15,7 @@ export default class PostsController {
   }
 
   public async index() {
-    const posts = await Blog.all()
+    const posts = await Blog.query().preload('comments')
 
     return {
       data: posts,

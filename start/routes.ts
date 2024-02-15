@@ -20,6 +20,6 @@ router
     })
     router.resource('/post', PostsController).apiOnly()
     router.delete('/post/delimage/:id', [PostsController, 'deleteImage'])
-    router.post('/post/comments/:postId', [CommentsController, 'store'])
+    router.post('/post/comments/:blogId', [CommentsController, 'store'])
   })
   .prefix('/api')

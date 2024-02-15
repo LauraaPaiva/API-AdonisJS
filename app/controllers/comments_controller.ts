@@ -5,11 +5,11 @@ import Comment from '#models/comment'
 export default class CommentsController {
   public async store({ request, response, params }: HttpContext) {
     const body = request.body()
-    const postId = params.postId
+    const blogId = params.blogId
 
-    await Blog.findOrFail(postId)
+    await Blog.findOrFail(blogId)
 
-    body.postId = postId
+    body.blogId = blogId
 
     const comment = await Comment.create(body)
 
