@@ -25,6 +25,8 @@ export default class PostsController {
   public async show({ params }: HttpContext) {
     const post = await Blog.findOrFail(params.id)
 
+    await post.load('comments')
+
     return {
       data: post,
     }
